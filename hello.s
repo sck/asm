@@ -3,9 +3,9 @@
 BITS 64
 section .text
 
-global _myasm
+global myasm
 
-_myasm:
+myasm:
   MOV RAX, 0x1234567890123456
   MOV EAX, 0x12345678
   ; RAX -> 0000000012345678
@@ -18,7 +18,3 @@ _myasm:
   mov dil, al
   mov edi, eax
   RET
-
-    
-section .data
-

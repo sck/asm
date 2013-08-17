@@ -2,5 +2,5 @@
 
 . ./local.sh
 
-$NASM -f macho64 hello.s
+$NASM $NASM_FLAGS -f $FORMAT hello.s
 $CC -o m m.c hello.o

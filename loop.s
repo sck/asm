@@ -3,9 +3,9 @@
 BITS 64
 section .text
 
-global _loop_add_imm8
+global loop_add_imm8
 
-_loop_add_imm8:
+loop_add_imm8:
   push rbp
   mov ebp, edi
   push rbx
@@ -23,9 +23,8 @@ _loop_add_imm8:
   pop rbp
   ret
 
-global _loop_dec_to_zero
-
-_loop_dec_to_zero:
+global loop_dec_to_zero
+loop_dec_to_zero:
   push rbp
   mov  rsp, rbp
   push rbx
@@ -42,9 +41,8 @@ _loop_dec_to_zero:
   pop rbp
   ret
 
-global _loop_inc
-
-_loop_inc:
+global loop_inc
+loop_inc:
   push rbp
   push rbx
   push rax

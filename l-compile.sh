@@ -2,5 +2,5 @@
 
 . ./local.sh
 
-$NASM -f macho64 loop.s
+$NASM $NASM_FLAGS -f $FORMAT loop.s
 $CC -o l l.c loop.o
