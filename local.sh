@@ -1,2 +1,0 @@
-NASM=nasm
-CC=clang
