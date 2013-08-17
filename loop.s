@@ -4,7 +4,7 @@ BITS 64
 section .text
 
 global loop_add_imm8
-
+loop_add_imm8:
 ; [ x86_64 Intel(R) Atom(TM) CPU 330 @ 1.60GHz GenuineIntel GNU/Linux ]
 ;
 ;       2537.126989 task-clock                #    1.000 CPUs utilized
@@ -36,8 +36,11 @@ global loop_add_imm8
 ;             4,271 branch-misses             #    0.00% of all branches
 ;
 ;       0.500850556 seconds time elapsed
-
-loop_add_imm8:
+;
+; [ x86_64 2.3 GHz Intel Core i7 Mac OS X ]
+; 
+; 0.33s user 0.00s system 96% cpu 0.337 total
+;
   push rbp
   mov ebp, edi
   push rbx
@@ -55,6 +58,8 @@ loop_add_imm8:
   pop rbp
   ret
 
+global loop_dec_to_zero
+loop_dec_to_zero:
 ;  [ x86_64 Intel(R) Atom(TM) CPU 330 @ 1.60GHz GenuineIntel GNU/Linux ]
 ; 
 ;        1260.060729 task-clock                #    0.999 CPUs utilized
@@ -85,9 +90,11 @@ loop_add_imm8:
 ;              4,120 branch-misses             #    0.00% of all branches
 ; 
 ;        0.501445446 seconds time elapsed
-
-global loop_dec_to_zero
-loop_dec_to_zero:
+;
+; [ x86_64 2.3 GHz Intel Core i7 Mac OS X ]
+; 
+; 0.33s user 0.00s system 99% cpu 0.328 total
+;
   push rbp
   mov  rsp, rbp
   push rbx
@@ -105,6 +112,8 @@ loop_dec_to_zero:
   ret
 
 
+global loop_inc
+loop_inc:
 ;  [ x86_64 Intel(R) Atom(TM) CPU 330 @ 1.60GHz GenuineIntel GNU/Linux ]
 ; 
 ;        2161.567993 task-clock                #    1.000 CPUs utilized
@@ -135,9 +144,11 @@ loop_dec_to_zero:
 ;              3,781 branch-misses             #    0.00% of all branches
 ; 
 ;        0.574517649 seconds time elapsed
-
-global loop_inc
-loop_inc:
+;
+; [ x86_64 2.3 GHz Intel Core i7 Mac OS X ]
+; 
+; 0.37s user 0.00s system 99% cpu 0.369 total
+; 
   push rbp
   push rbx
   push rax
